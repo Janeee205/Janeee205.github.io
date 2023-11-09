@@ -1,9 +1,196 @@
 // sass 쓰는법
 // 확장자 .scss 쓴다
 // watch Sass 누른다 끝
+// 변수 선언하고 색상 지정하면 꺼내 쓸 수 있음
+
+$textcolor: #343434;
+$textsize: 30px;
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 35px 50px;
+  //   border: 1px solid #343434;
+}
+
+.name {
+  color: $textcolor;
+  font-size: 100px;
+  font-weight: bolder;
+  font-style: italic;
+}
+
+.profile1 {
+  display: flex;
+  //   justify-content: space-between;
+  justify-content: center;
+  gap: 55px;
+  margin-top: 150px;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 50px;
+
+  .profile1-box {
+    width: 290px;
+  }
+}
+
+.profile1-left {
+  .img-wrapper {
+    text-align: center;
+
+    .profile-photo {
+      width: 250px;
+      border-radius: 50%;
+    }
+  }
+}
+
+.profile1-right {
+  //   border: 1px solid blue;
+  flex-direction: column;
+  display: flex;
+  gap: 50px;
+
+  .infobox {
+    flex-direction: column;
+    display: flex;
+    gap: 15px;
+  }
+}
+
+.title {
+  color: $textcolor;
+  font-size: $textsize;
+  font-weight: bolder;
+  font-style: italic;
+}
+
+.info {
+  color: $textcolor;
+}
+
+.profile2 {
+  //   border: 1px solid violet;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 55px;
+  margin-top: 100px;
+
+  .title {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .profile2-box {
+    width: 550px;
+
+    .infobox {
+      width: 100%;
+      height: 300px;
+      border: 1px solid lightgray;
+    }
+  }
+}
+
+// 반응형
+@media screen and (max-width: 1200px) {
+  .wrapper {
+    width: 100%;
+  }
+  .name {
+    font-size: 40px;
+  }
+
+  .profile1 {
+    gap: 4%;
+    margin-top: 70px;
+
+    .profile1-box {
+      width: 100%;
+    }
+    .profile1-left {
+      text-align: center;
+    }
+
+    .profile-photo {
+      width: 200px;
+      text-align: center;
+    }
+  }
+
+  .profile2 {
+    gap: 4%;
+    margin-top: 50px;
+  }
+
+  .profile2 .profile2-box {
+    width: calc((100%) / 2);
+    .infobox {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: 100%;
+
+    .title {
+      font-size: 20px;
+    }
+
+    .info {
+      font-size: 15px;
+    }
+  }
+
+  .profile1 {
+    flex-direction: column;
+    gap: 30px;
+
+    .profile-photo {
+      width: 150px;
+    }
+
+    .profile1-box {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      //   gap: 10px;
+
+      .infobox {
+        gap: 5px;
+      }
+    }
+
+    .profile1-right {
+      gap: 10px;
+    }
+  }
+
+  .profile2 {
+    margin-top: 30px;
+    flex-direction: column;
+
+    .profile2-box {
+      width: 100%;
+      .title {
+        margin-bottom: 5px;
+      }
+    }
+  }
 }
