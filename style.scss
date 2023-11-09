@@ -34,7 +34,6 @@ body {
 
 .profile1 {
   display: flex;
-  //   justify-content: space-between;
   justify-content: center;
   gap: 55px;
   margin-top: 150px;
@@ -42,7 +41,8 @@ body {
   padding-bottom: 50px;
 
   .profile1-box {
-    width: 290px;
+    width: 550px;
+    // border: 1px solid #000;
   }
 }
 
