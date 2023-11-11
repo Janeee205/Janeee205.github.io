@@ -4,6 +4,7 @@
 // 변수 선언하고 색상 지정하면 꺼내 쓸 수 있음
 
 $textcolor: #343434;
+$title: #6b7d85;
 $textsize: 30px;
 
 * {
@@ -19,17 +20,29 @@ body {
 }
 
 .wrapper {
-  width: 1440px;
-  margin: 0 auto;
-  padding: 35px 50px;
   //   border: 1px solid #343434;
 }
 
+header,
+footer {
+  height: 170px;
+  display: flex;
+  align-items: center;
+  background-color: #6b7d85;
+}
+
 .name {
-  color: $textcolor;
-  font-size: 100px;
+  font-size: 50px;
   font-weight: bolder;
   font-style: italic;
+  color: #fff;
+  margin: 0 50px 10px;
+}
+
+main {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 35px 50px;
 }
 
 .profile1 {
@@ -71,7 +84,7 @@ body {
 }
 
 .title {
-  color: $textcolor;
+  color: $title;
   font-size: $textsize;
   font-weight: bolder;
   font-style: italic;
@@ -87,7 +100,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 55px;
-  margin-top: 100px;
+  margin-top: 50px;
 
   .title {
     text-align: center;
@@ -106,13 +119,56 @@ body {
 }
 
 .portfolio {
-  width: 100%;
-  border: 1px solid #000;
+  margin: 50px 0 150px;
+
+  .title {
+    margin-bottom: 25px;
+  }
+
+  .mywork-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border: 1px solid #000;
+
+    .mywork {
+      width: calc((100% - 55px) / 3);
+      height: 235px;
+      border: 1px solid #000;
+    }
+  }
 }
 
+footer {
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  .icon-wrapper {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    .iconify1 {
+      font-size: 35px;
+    }
+    .iconify2 {
+      font-size: 40px;
+    }
+  }
+  .footer-text {
+    font-size: 12px;
+    color: #fff;
+  }
+}
+
+// *****************************************
 // 반응형
 @media screen and (max-width: 1200px) {
-  .wrapper {
+  header {
+    height: 100px;
+  }
+
+  main {
     width: 100%;
   }
   .name {
@@ -139,18 +195,23 @@ body {
   .profile2 {
     gap: 4%;
     margin-top: 50px;
+
+    .profile2-box {
+      width: calc((100%) / 2);
+      .infobox {
+        width: 100%;
+      }
+    }
   }
 
-  .profile2 .profile2-box {
-    width: calc((100%) / 2);
-    .infobox {
-      width: 100%;
-    }
+  footer {
+    height: 100px;
+    gap: 5px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .wrapper {
+  main {
     width: 100%;
 
     .title {
@@ -190,12 +251,27 @@ body {
   .profile2 {
     margin-top: 30px;
     flex-direction: column;
+    gap: 10px;
 
     .profile2-box {
       width: 100%;
       .title {
         margin-bottom: 5px;
       }
+    }
+  }
+
+  .portfolio {
+    margin-bottom: 70px;
+    .title {
+      margin-bottom: 5px;
+    }
+
+    .iconify1 {
+      font-size: 5px;
+    }
+    .iconify2 {
+      font-size: 20px;
     }
   }
 }
