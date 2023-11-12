@@ -48,7 +48,7 @@ main {
   text-align: center;
 }
 .profile1-left .img-wrapper .profile-photo {
-  width: 250px;
+  width: 300px;
   border-radius: 50%;
 }
 
@@ -153,8 +153,8 @@ footer .footer-text {
   .profile1 .profile1-left {
     text-align: center;
   }
-  .profile1 .profile-photo {
-    width: 200px;
+  .profile1 .profile1-left .profile-photo {
+    width: 230px;
     text-align: center;
   }
   .profile2 {
@@ -207,7 +207,8 @@ footer .footer-text {
     gap: 10px;
   }
   .profile2 .profile2-box {
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
   }
   .profile2 .profile2-box .title {
     margin-bottom: 5px;
@@ -218,10 +219,24 @@ footer .footer-text {
   .portfolio .title {
     margin-bottom: 5px;
   }
-  .portfolio .iconify1 {
-    font-size: 5px;
+  .portfolio .mywork-wrapper {
+    flex-direction: column;
+    gap: 15px;
   }
-  .portfolio .iconify2 {
-    font-size: 20px;
+  .portfolio .mywork-wrapper .mywork {
+    width: 80%;
+    margin: 0 auto;
+  }
+  footer .icon-wrapper {
+    gap: 5px;
+  }
+  footer .icon-wrapper .iconify1 {
+    font-size: 25px;
+  }
+  footer .icon-wrapper .iconify2 {
+    font-size: 30px;
+  }
+  footer .footer-text {
+    font-size: 10px;
   }
 }/*# sourceMappingURL=style.css.map */

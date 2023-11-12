@@ -19,10 +19,6 @@ body {
   height: 100%;
 }
 
-.wrapper {
-  //   border: 1px solid #343434;
-}
-
 header,
 footer {
   height: 170px;
@@ -64,7 +60,7 @@ main {
     text-align: center;
 
     .profile-photo {
-      width: 250px;
+      width: 300px;
       border-radius: 50%;
     }
   }
@@ -184,11 +180,11 @@ footer {
     }
     .profile1-left {
       text-align: center;
-    }
 
-    .profile-photo {
-      width: 200px;
-      text-align: center;
+      .profile-photo {
+        width: 230px;
+        text-align: center;
+      }
     }
   }
 
@@ -254,7 +250,8 @@ footer {
     gap: 10px;
 
     .profile2-box {
-      width: 100%;
+      width: 80%;
+      margin: 0 auto;
       .title {
         margin-bottom: 5px;
       }
@@ -266,12 +263,28 @@ footer {
     .title {
       margin-bottom: 5px;
     }
-
-    .iconify1 {
-      font-size: 5px;
+    .mywork-wrapper {
+      flex-direction: column;
+      gap: 15px;
+      .mywork {
+        width: 80%;
+        margin: 0 auto;
+      }
     }
-    .iconify2 {
-      font-size: 20px;
+  }
+
+  footer {
+    .icon-wrapper {
+      gap: 5px;
+      .iconify1 {
+        font-size: 25px;
+      }
+      .iconify2 {
+        font-size: 30px;
+      }
+    }
+    .footer-text {
+      font-size: 10px;
     }
   }
 }
